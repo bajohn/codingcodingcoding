@@ -1,4 +1,5 @@
 
+# Sort an array via selection sort algorithm.
 def main():
     arr = [10,1, 20,11,31,5,5, 161,1,7]
     print(doSort(arr))

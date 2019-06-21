@@ -1,5 +1,5 @@
 
-
+# search for "target" value in array "arr".
 
 def main():
     arr = ['a', 'b', 'c', 'd', 'f', 'g','h','i']
