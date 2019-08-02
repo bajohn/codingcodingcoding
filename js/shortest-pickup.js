@@ -14,16 +14,19 @@ const board = [
 // coordinate annotation
 // i,j,shortest path to coordinate
 
+//sample end state: 
+// 0: (6) [-1, 0, -5, -6, 0, 0]
+// 1: (6) [-2, -3, -4, -5, -6, -7]
+// 2: (6) [0, 0, 0, 0, 0, -8]
+// 3: (6) [0, 0, 1, 9, 0, -9]
+// 4: (6) [0, 0, -13, -12, -11, -10]
 const queue = ['0,0,1'];
 
 visited = {};
 let ret = -1;
 const doBfs = function () {
     while (queue.length > 0 && ret === -1) {
-        console.log(queue);
         const curCoordStr = queue.pop();
-        console.log(curCoordStr);
-        console.log(board);
         const curCoord = curCoordStr.split(',').map(el => { return Number(el) });
         checkNeighbor(curCoord[0] + 1, curCoord[1], 1 + curCoord[2]);
         checkNeighbor(curCoord[0], curCoord[1] + 1, 1 + curCoord[2]);
